@@ -11,14 +11,8 @@ function setQuery(event) {
     getResults(searchbox.value);
   }
 }
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-function getResults(query) {
-  const url = `${api.baseURL}weather?q=${query}&units=imperial&appid=${api.key}`;
-  fetch(url)
-    .then((weather) => {
-      return weather.json();
-    })
-    .then(displayResults);
 }
 function displayResults(weather) {
   let city = document.querySelector(".location .city");
