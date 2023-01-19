@@ -6,7 +6,11 @@ function formatDate(date) {
     "Wednesday",
     "Thursday",
     "Friday",
+<<<<<<< HEAD
     "Saturday",
+=======
+    "Saturday"
+>>>>>>> f53be8d4c37adb33f79643dce70bf676d2694bcc
   ];
   let months = [
     "January",
@@ -20,7 +24,11 @@ function formatDate(date) {
     "September",
     "October",
     "November",
+<<<<<<< HEAD
     "December",
+=======
+    "December"
+>>>>>>> f53be8d4c37adb33f79643dce70bf676d2694bcc
   ];
 
   let currentYear = date.getFullYear();
@@ -62,9 +70,25 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+<<<<<<< HEAD
+=======
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+>>>>>>> f53be8d4c37adb33f79643dce70bf676d2694bcc
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+<<<<<<< HEAD
+=======
+
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+searchCity("Seattle");
+>>>>>>> f53be8d4c37adb33f79643dce70bf676d2694bcc
